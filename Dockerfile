@@ -1,4 +1,5 @@
-FROM python:3.8.10-buster
+# FROM python:3.8.10-buster
+FROM tensorflow/tensorflow:latest-gpu
 USER root
 
 # COPY ./sources.list /etc/apt/sources.list
