@@ -1,5 +1,5 @@
 # FROM python:3.8.10-buster
-FROM tensorflow/tensorflow:latest-gpu
+FROM tensorflow/tensorflow:2.10.0-gpu
 USER root
 
 # COPY ./sources.list /etc/apt/sources.list
@@ -16,8 +16,8 @@ COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 RUN mkdir -p /models/.deepface/weights && \
-    wget -nv -O /models/.deepface/weights/retinaface.h5 https://github.com/serengil/deepface_models/releases/download/v1.0/retinaface.h5 && \
-    wget -nv -O /models/.deepface/weights/facenet512_weights.h5 https://github.com/serengil/deepface_models/releases/download/v1.0/facenet512_weights.h5
+    wget -nv -O /models/.deepface/weights/retinaface.h5 https://hub.gitmirror.com/https://github.com/serengil/deepface_models/releases/download/v1.0/retinaface.h5 && \
+    wget -nv -O /models/.deepface/weights/facenet512_weights.h5 https://hub.gitmirror.com/https://github.com/serengil/deepface_models/releases/download/v1.0/facenet512_weights.h5
 
 
 COPY server.py .
