@@ -3,6 +3,8 @@ FROM tensorflow/tensorflow:latest-gpu
 USER root
 
 # COPY ./sources.list /etc/apt/sources.list
+RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub
+RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/7fa2af80.pub
 RUN apt update && \
     apt install -y libgl1-mesa-glx libglib2.0-0 libsm6 libxrender1 libfontconfig1 && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/log/*
