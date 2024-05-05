@@ -4,3 +4,4 @@ uvicorn==0.23.2
 python-dotenv==1.0.0
 python-multipart==0.0.6
 deepface==0.0.89
+tf-keras
