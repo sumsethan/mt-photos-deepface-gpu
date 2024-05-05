@@ -13,7 +13,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # 安装依赖包
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt --index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 RUN mkdir -p /models/.deepface/weights && \
     wget -nv -O /models/.deepface/weights/retinaface.h5 https://hub.gitmirror.com/https://github.com/serengil/deepface_models/releases/download/v1.0/retinaface.h5 && \
