@@ -15,9 +15,9 @@ COPY requirements.txt .
 # 安装依赖包
 RUN pip3 install --no-cache-dir -r requirements.txt --index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
-RUN mkdir -p /models/.deepface/weights && \
-    wget -nv -O /models/.deepface/weights/retinaface.h5 https://hub.gitmirror.com/https://github.com/serengil/deepface_models/releases/download/v1.0/retinaface.h5 && \
-    wget -nv -O /models/.deepface/weights/facenet512_weights.h5 https://hub.gitmirror.com/https://github.com/serengil/deepface_models/releases/download/v1.0/facenet512_weights.h5
+RUN mkdir -p /models/.deepface/weights
+RUN wget -nv -O /models/.deepface/weights/retinaface.h5 https://github.com/serengil/deepface_models/releases/download/v1.0/retinaface.h5 
+RUN wget -nv -O /models/.deepface/weights/facenet512_weights.h5 https://github.com/serengil/deepface_models/releases/download/v1.0/facenet512_weights.h5
 
 
 COPY server.py .
