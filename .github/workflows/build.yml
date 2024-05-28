@@ -25,4 +25,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ vars.DOCKER_USERNAME }}/${{ vars.IMAGE_NAME }}:latest
+          tags: sumsethan/mt-photos-deepface-gpu:latest
