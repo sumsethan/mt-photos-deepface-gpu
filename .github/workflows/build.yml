@@ -25,4 +25,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: sumsethan/mt-photos-deepface-gpu:latest
+          tags: sumsethan/mt-photos-deepface-gpu:240528
