@@ -1,6 +1,8 @@
 # MT Photos人脸识别API
 
+
 - 基于[serengil/deepface](https://github.com/serengil/deepface)实现的人脸识别API
+- Modified Dockerfile for running on CUDA ,and Docker compiling Acceleration.
 
 ## 模型选择
 
