@@ -35,7 +35,7 @@ backends = [
     'fastmtcnn',
 ]
 
-detector_backend = os.getenv("DETECTOR_BACKEND", "retinaface")
+detector_backend = os.getenv("DETECTOR_BACKEND", "yolov8")
 
 
 # 人脸特征提取模型
