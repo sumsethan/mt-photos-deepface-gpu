@@ -14,6 +14,7 @@ COPY requirements.txt .
 
 # 安装依赖包
 RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip install ultralytics
 
 RUN mkdir -p /models/.deepface/weights
 # RUN wget -nv -O /models/.deepface/weights/retinaface.h5 https://github.com/serengil/deepface_models/releases/download/v1.0/retinaface.h5 
