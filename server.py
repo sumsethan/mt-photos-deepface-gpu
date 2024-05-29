@@ -35,7 +35,7 @@ backends = [
     'fastmtcnn',
 ]
 
-detector_backend = os.getenv("DETECTOR_BACKEND", "retinaface")
+detector_backend = os.getenv("DETECTOR_BACKEND", "yolov8")
 
 
 # 人脸特征提取模型
@@ -51,7 +51,7 @@ models = [
     "SFace",
     "GhostFaceNet",
 ]
-recognition_model = os.getenv("RECOGNITION_MODEL", "Facenet512")
+recognition_model = os.getenv("RECOGNITION_MODEL", "VGG-Face")
 
 
 async def check_inactive():
