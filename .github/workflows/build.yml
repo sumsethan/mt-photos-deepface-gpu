@@ -25,4 +25,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: sumsethan/mt-photos-deepface-gpu:240529-VGGface-retinaface
+          tags: sumsethan/mt-photos-deepface-gpu:240529-VGGface-yolov8
