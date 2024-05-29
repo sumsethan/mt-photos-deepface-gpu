@@ -17,7 +17,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt --index-url https://pypi.tun
 
 RUN mkdir -p /models/.deepface/weights
 RUN wget -nv -O /models/.deepface/weights/retinaface.h5 https://github.com/serengil/deepface_models/releases/download/v1.0/retinaface.h5 
-RUN wget -nv -O /models/.deepface/weights/facenet512_weights.h5 https://github.com/serengil/deepface_models/releases/download/v1.0/vgg_face_weights.h5
+RUN wget -nv -O /models/.deepface/weights/vgg_face_weights.h5 https://github.com/serengil/deepface_models/releases/download/v1.0/vgg_face_weights.h5
 
 
 COPY server.py .
